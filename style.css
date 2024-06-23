@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#game{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./img.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-width: 270px !important;
+    align-items: center;
+}
+
+#currplayer{
+    padding: 0.7rem;
+    background-color: rgba(255,255,255,0.15);
+    min-width: 9rem;
+    text-align: center;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#boxs{
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 16rem;
+    aspect-ratio: 1/1;
+    background-color: rgba(255,255,255,0.15);
+    position: relative;
+    border-radius: 10px;
+}
+
+.box{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 4.27rem;
+    aspect-ratio: 1/1;
+    color: white;
+    transition: all 0s;
+}
+
+.box1,.box2,.box4,.box5{
+    border-bottom: 2px solid white;
+    border-right: 2px solid wheat;
+}
+
+.box7,.box8{
+    border-right: 2px solid white;
+}
+
+.box3,.box6{
+    border-bottom: 2px solid white;
+}
+
+#newgame{
+    padding: 0.7rem;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.15);
+    visibility: hidden;
+    border-radius: 7px;
+    color: white;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.green{
+    background-color: rgb(30, 195, 30);
+}
+
+.box:hover,#newgame:hover,#currplayer:hover{
+    background-color: rgba(255,255,255,0.4);
+}
+#newgame:hover,#currplayer:hover{
+    transform: scale(1.07);
+}
